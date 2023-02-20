@@ -11,19 +11,19 @@ def lll_sat_generator(n, k):
         print("n must be greater or equal to k for k-sat problem")
         return []
 
-    d = int(2 ** k / (2.71829 * k))
-    clause_list = []
+    d = int(2**k / (2.71829 * k))
+    clauses = []
     vars_quota = [d] * n
 
     valid_vars = [i for i in range(n) if vars_quota[i] > 0]
     while len(valid_vars) >= k:
-        _clause = sample(valid_vars, k)
-        for x in _clause:
+        clause = sample(valid_vars, k)
+        for x in clause:
             vars_quota[x] -= 1
         valid_vars = [i for i in range(n) if vars_quota[i] > 0]
-        _clause = [x+1 for x in _clause]
-        _clause = [x if random.random() > 0.5 else -x for x in _clause]
+        clause = [x + 1 for x in clause]
+        clause = [x if random.random() > 0.5 else -x for x in clause]
 
-        clause_list.append(_clause)
+        clauses.append(clause)
 
-    return clause_list
+    return clauses
