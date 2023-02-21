@@ -6,13 +6,13 @@ from random import sample
 # "DISPROOF OF THE NEIGHBORHOOD CONJECTURE WITH IMPLICATIONS TO SAT*"
 
 
-def lll_sat_generator(n, k):
+def lll_generator(n, k):
     if n < k:
         print("n must be greater or equal to k for k-sat problem")
         return []
 
     d = int(2**k / (2.71829 * k))
-    clauses = []
+    instance = []
     vars_quota = [d] * n
 
     valid_vars = [i for i in range(n) if vars_quota[i] > 0]
@@ -24,6 +24,6 @@ def lll_sat_generator(n, k):
         clause = [x + 1 for x in clause]
         clause = [x if random.random() > 0.5 else -x for x in clause]
 
-        clauses.append(clause)
+        instance.append(clause)
 
-    return clauses
+    return instance
