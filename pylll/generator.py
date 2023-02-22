@@ -3,7 +3,7 @@ from random import sample
 
 # A random satisfiable k-sat instance generator based on lovasz local lemma.
 # Noticed that the constrian is different with the original version and based on Theorem 1.3 in paper
-# "DISPROOF OF THE NEIGHBORHOOD CONJECTURE WITH IMPLICATIONS TO SAT*"
+# "Disproof of the neighborhood conjecture with implications to SAT"
 
 
 def lll_generator(n, k):

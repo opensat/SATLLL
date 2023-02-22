@@ -3,25 +3,10 @@ import time
 import numpy as np
 from pysat.formula import CNF
 from pysat.solvers import Solver
-from pylll.generator import lll_generator
-from pylll.decision import lll_decision
-from pylll.solver import lll_solver
 
-
-def read_sat(sat_path):
-    with open(sat_path) as f:
-        sat_lines = f.readlines()
-        header = sat_lines[0]
-        header_info = header.replace("\n", "").split(" ")
-        num_vars = int(header_info[-2])
-        num_clauses = int(header_info[-1])
-
-        sat = [
-            [int(x) for x in line.replace(" 0\n", "").split(" ")]
-            for line in sat_lines[1:]
-        ]
-
-        return sat, num_vars, num_clauses
+from pylll import lll_generator
+from pylll import lll_decision
+from pylll import lll_solver
 
 
 if __name__ == "__main__":
@@ -33,7 +18,7 @@ if __name__ == "__main__":
     print("----------")
 
     # decision algorithm
-    satisfiable = lll_decision(sat_instance, n, 100)
+    satisfiable = lll_decision(sat_instance, n)
     print(f"LLL satisfiable: {satisfiable}")
 
     print("----------")
@@ -43,7 +28,7 @@ if __name__ == "__main__":
     model = lll_solver(sat_instance, n)
     if model:
         print(f"The SAT instance can be solved by algorithm LLL")
-    print(f"solver time: {time.time() - start_time:.4f}")
+    print(f"solving time: {time.time() - start_time:.4f}")
     print("----------")
 
     # modern solver
@@ -51,4 +36,4 @@ if __name__ == "__main__":
     start_time = time.time()
     with Solver(bootstrap_with=cnf) as solver:
         print(f"The SAT instance can be solved: {solver.solve()}")
-    print(f"solver time: {time.time() - start_time:.4f}")
+    print(f"solving time: {time.time() - start_time:.4f}")
