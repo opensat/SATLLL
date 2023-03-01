@@ -3,7 +3,7 @@
 <h2 align="center">What is SATLLL</h2>
 
 A Python tool that implements Lovasz Local Lemma's application on The Boolean Satisfiability (SAT) problem, which includes:
-- an instance geneartor under LLL constrain
+- an instance geneartor which generate instance in the local lemma regime (which will be satisfiable)
 - an algorithm which solves a decision problem that if a SAT instance is in the local lemma regime
 - a solver for the instances in the local lemma regime, which contains two part:
   - the algorithmic LLL, which provides efficient algorithm to find a solution
