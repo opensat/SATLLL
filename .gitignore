@@ -2,3 +2,6 @@ __pycache__
 .ipynb_checkpoints
 question.md
 backup
+pylll.egg-info
+build
+dist
