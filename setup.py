@@ -21,7 +21,7 @@ setup(
     ],
     keywords='lovasz ',
     url='https://github.com/opensat/PyLLL',
-    packages=find_packages(exclude=['example', '.ipynb_checkpoints', '.vscode', 'backup', 'formulas', 'images', 'industrial_formulas', 'unsolve_formulas']),
+    packages=find_packages(exclude=['example', '.ipynb_checkpoints', '.vscode', 'backup', 'formulas', 'images', 'industrial_formulas', 'unsolve_formulas', 'phase_transition.ipynb']),
     python_requires='>=3.5',
     install_requires=[],
     include_package_data=True,
