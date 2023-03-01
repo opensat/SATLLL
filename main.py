@@ -14,7 +14,6 @@ if __name__ == "__main__":
     n = 500  # variable numbers
     sat_instance = lll_generator(n, 5)
     print(f"the size of SAT: {len(sat_instance)}")
-
     print("----------")
 
     # decision algorithm
@@ -22,14 +21,13 @@ if __name__ == "__main__":
     satisfiable = lll_decision(sat_instance, n, eval_iter=10)
     print(f"LLL satisfiable: {satisfiable}")
     print(f"desision time: {time.time() - start_time:.4f}")
-
     print("----------")
 
     # lll solver (search)
     start_time = time.time()
     model = lll_solver(sat_instance, n)
     if model:
-        print(f"The SAT instance can be solved by algorithm LLL")
+        print(f"The SAT instance can be solved by algorithmic LLL")
     print(f"solving time: {time.time() - start_time:.4f}")
     print("----------")
 
