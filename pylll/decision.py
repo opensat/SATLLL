@@ -2,7 +2,7 @@ from functools import reduce
 import operator
 
 
-def lll_decision(instance, n, eval_iter=100):
+def lll_decision(instance, n, eval_iter=100, need_dependency=False):
     """n: the variable numbers"""
     num_clauses = len(instance)
     # initial the probability for each clause (event)
@@ -40,4 +40,7 @@ def lll_decision(instance, n, eval_iter=100):
         ]
         alphas = update_alphas
 
-    return satisfiable
+    if need_dependency:
+        return satisfiable, dependency
+    else:
+        return satisfiable
