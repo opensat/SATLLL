@@ -12,7 +12,7 @@ from satlll import lll_solver
 if __name__ == "__main__":
     # generator
     n = 500  # variable numbers
-    sat_instance = lll_generator(n, 13)
+    sat_instance = lll_generator(n, 5)
     print(f"the size of SAT: {len(sat_instance)}")
 
     print("----------")
