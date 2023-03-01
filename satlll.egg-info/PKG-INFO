@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: satlll
+Version: 0.1.0
+Summary: A Python tool that implements Lovasz Local Lemma's application on The Boolean Satisfiability (SAT) problem, which includes an instance geneartor,an algorithm (decision procedure), which decide that if a SAT instance satisfies in local lemma regime, and a solver can find solution or sample a uniform random solution in the local lemma regime.
+Home-page: https://github.com/opensat/PyLLL
+Author: wwen
+Author-email: wenwh96@gmail.com
+Keywords: lovasz sat
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.5
+License-File: LICENSE

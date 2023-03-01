@@ -1,7 +1,7 @@
 # A solver based on Algorithmic Lovász local lemma: https://en.wikipedia.org/wiki/Algorithmic_Lov%C3%A1sz_local_lemma
 # and 
 import random
-from pylll.decision import lll_decision
+from satlll.decision import lll_decision
 
 def is_satisfied(clause, assignment):
     for literal in clause:

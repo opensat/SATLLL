@@ -4,9 +4,9 @@ import numpy as np
 from pysat.formula import CNF
 from pysat.solvers import Solver
 
-from pylll import lll_generator
-from pylll import lll_decision
-from pylll import lll_solver
+from satlll import lll_generator
+from satlll import lll_decision
+from satlll import lll_solver
 
 
 if __name__ == "__main__":

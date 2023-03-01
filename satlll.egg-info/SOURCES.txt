@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+satlll/__init__.py
+satlll/decision.py
+satlll/generator.py
+satlll/solver.py
+satlll.egg-info/PKG-INFO
+satlll.egg-info/SOURCES.txt
+satlll.egg-info/dependency_links.txt
+satlll.egg-info/not-zip-safe
+satlll.egg-info/top_level.txt
