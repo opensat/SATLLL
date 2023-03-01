@@ -18,7 +18,7 @@ pip install satlll
 
 <h2 align="center">Demo</h2>
 
-```
+```Python
 import time
 
 from satlll import lll_generator
