@@ -35,7 +35,7 @@ if __name__ == "__main__":
 
     # decision algorithm
     start_time = time.time()
-    satisfiable = lll_decision(sat_instance, n, eval_iter=10)
+    satisfiable = lll_decision(sat_instance, n)
     print(f"LLL satisfiable: {satisfiable}")
     print(f"desision time: {time.time() - start_time:.4f}")
     print("----------")
